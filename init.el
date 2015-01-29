@@ -77,6 +77,10 @@
 (if (eq system-type 'darwin)
     (add-to-list 'my-packages 'exec-path-from-shell))
 
+;; On OS X, remap meta to cmd
+(setq mac-option-modifier 'super)
+(setq mac-command-modifier 'meta)
+
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
