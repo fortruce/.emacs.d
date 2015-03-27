@@ -80,3 +80,19 @@
      (define-key clojure-mode-map (kbd "C-M-r") 'cider-refresh)
      (define-key clojure-mode-map (kbd "C-c u") 'cider-user-ns)
      (define-key cider-mode-map (kbd "C-c u") 'cider-user-ns)))
+
+;; Set Speclj indentaion
+(put 'describe 'clojure-backtracking-indent '(4 2))
+(put 'context 'clojure-backtracking-indent '(4 2))
+(put 'it 'clojure-backtracking-indent '(4 2))
+(put 'before 'clojure-backtracking-indent '(2))
+(put 'before-all 'clojure-backtracking-indent '(2))
+(put 'after-all 'clojure-backtracking-indent '(2))
+(put 'after 'clojure-backtracking-indent '(2))
+
+;; Set Compojure indentation
+(put 'GET 'clojure-backtracking-indent '(4 4 2))
+(put 'POST 'clojure-backtracking-indent '(4 4 2))
+(put 'PUT 'clojure-backtracking-indent '(4 4 2))
+(put 'DELETE 'clojure-backtracking-indent '(4 4 2))
+(put 'PATCH 'clojure-backtracking-indent '(4 4 2))
